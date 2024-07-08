@@ -1,47 +1,51 @@
 # Fibonacci API
-API นี้คือการสร้างลำดับ Fibonacci และคำนวณผลรวมของมันตามจำนวนสมาชิกที่กำหนด โดยรับค่าตัวเลขระหว่าง 1 ถึง 100 
-## Endpoints Example 
 
-```json
-{
-“member-count”: 8,
-“sequence”: [ 0, 1, 1, 2, 3, 5, 8, 13 ],
-“total”: 33
-}
-```
-## Endpoints 
-```
-GET /api/v1/test/:memberCount
-```
+The Fibonacci API generates a Fibonacci sequence and calculates its sum based on a specified number of members. It accepts an integer between 1 and 100.
+
 **Parameters :**
-- `memberCount` (integer): จำนวนสมาชิกของลำดับ Fibonacci (ต้องอยู่ระหว่าง 1 ถึง 100)
+
+-  `memberCount` (integer): The number of members in the Fibonacci sequence (must be between 1 and 100)
 
 **Response :**
-- `member-count`: จำนวนสมาชิกที่ใส่เข้ามา
-- `sequence`: ลำดับของ Fibonacci
-- `total`: ผลรวมของลำดับ Fibonacci
 
-## Usage
+-  `member-count`: The number of members requested
+
+-  `sequence`: The Fibonacci sequence
+
+-  `total`: The sum of the Fibonacci sequence
+## Installation
 1. Clone Repository:
-    ```bash
-    git clone <repository-url>
-    cd fibonacci-api
-    ```
-
-2. Installing Dependencies:
-    ```bash
-    npm install
-    ```
-
-3. Start Server::
-    ```bash
-    npm start
-    ```
-## Build & Run
 
 ```bash
-npm run build
+git clone <https://github.com/TennysonX/Back-end-Developer-Test.git>
+```
+
+2. Installing Dependencies:
+
+```bash
+npm install
+```
+## Usage
+ Running the Server
+ To start the server, use the following command:
+```bash
 npm start
 ```
+## Testing the API Endpoint
+Once the server is running, you can access the API by sending a GET request to the following endpoint:
+```
+GET http://localhost:3000/api/v1/test/8
+```
+**Response :**
+```json
+{
+"member-count": 8,
+"sequence": [0, 1, 1, 2, 3, 5, 8, 13],
+"total": 33
+}
+```
+
 ## Credits
-- [geeksforgeeks](https://www.geeksforgeeks.org/javascript-program-to-print-fibonacci-series/)
+
+- [GeeksforGeeks](https://www.geeksforgeeks.org/javascript-program-to-print-fibonacci-series/)
+-  [Programiz](https://www.programiz.com/javascript/examples/fibonacci-series)
